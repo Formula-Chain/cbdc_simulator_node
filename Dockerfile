@@ -15,4 +15,4 @@ EXPOSE 8545 30303
 
 # Define the entrypoint script
 ENTRYPOINT ["/bin/bash", "-c"]
-CMD ["/opt/besu/bin/besu --data-path=/opt/besu/data --genesis-file=/opt/besu/genesis.json --rpc-http-enabled --rpc-http-cors-origins=\"*\" --rpc-http-api=ADMIN,ETH,NET,PERM,QBFT --host-allowlist=\"*\""]
+CMD ["/opt/besu/bin/besu --data-path=/opt/besu/data --genesis-file=/opt/besu/genesis.json --bootnodes=$ENODE_URL --rpc-http-enabled --rpc-http-cors-origins=\"*\" --rpc-http-api=ADMIN,ETH,NET,PERM,QBFT --host-allowlist=\"*\""]
